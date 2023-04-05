@@ -1,7 +1,7 @@
 
-using System.Runtime.InteropServices;
+
+using Unity.IO.LowLevel.Unsafe;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class Game : MonoBehaviour
 {
@@ -162,7 +162,11 @@ public class Game : MonoBehaviour
     //function for the input from the player
     private void Update()
     {
-        if(!GameOver)
+        if(Input.GetKeyDown(KeyCode.R))
+        {
+            NewGame();
+        }
+        else if(!GameOver)
      {
             if (Input.GetMouseButtonDown(1))
              {

@@ -1,12 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 
+using UnityEngine;
+//This script holds the data present in an individual cell
 public struct Cell
 {
     //The possible states of a cell
     public enum Type
     {
+        //invalid is a placeholder for the possibility that neither of the other three choices are chosen
+        Invalid,
         Empty,
         Mine,
         Number,
